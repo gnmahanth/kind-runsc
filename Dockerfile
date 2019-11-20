@@ -8,4 +8,5 @@ RUN echo "Installing gVisor binaries ..." \
     && chmod 0755 /usr/bin/containerd-shim-runsc-v1 /usr/bin/runsc
 
 # copy updated containerd config 
-COPY config.toml /etc/containerd/config.toml
+# uncomment/needed if kind version is < 0.6.0 
+# COPY config.toml /etc/containerd/config.toml
